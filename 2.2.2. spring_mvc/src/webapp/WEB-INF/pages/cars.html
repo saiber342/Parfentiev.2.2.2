@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+</head>
+<body>
+
+<table border="5">
+    <tr>
+        <th>price</th>
+        <th>model</th>
+        <th>series</th>
+    </tr>
+    <tr th:each="car: ${carAttribute}">
+        <td th:utext="${car.getPrice()}">price</td>
+        <td th:utext="${car.getModel()}">model</td>
+        <td th:utext="${car.getSeries()}">series</td>
+    </tr>
+</table>
+
+</body>
+</html>
